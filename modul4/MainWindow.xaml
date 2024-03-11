@@ -4,22 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:modul4"
-        xmlns:
+        xmlns:vms="clr-namespace:modul4.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vms:MainWindowViewModel />
+    </Window.DataContext>   
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Chocolates}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <Label Content="nev"/>
-                        <Label Content="ar"/>
-                        <Label Content="db"/>
-                        <ProgressBar/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding Type}"/>
+                        <Label Content="{Binding Price}"/>
+                        <Label Content="{Binding Quantity}"/>
+                        <ProgressBar Value="{Binding Quantity}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
