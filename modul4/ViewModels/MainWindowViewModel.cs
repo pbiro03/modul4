@@ -37,6 +37,8 @@ namespace modul4.ViewModels
                 Price = 400,
                 Quantity = 16
             });
+
+            //asdasdasd
         }
     }
 }
