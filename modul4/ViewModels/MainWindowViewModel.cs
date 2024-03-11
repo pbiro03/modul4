@@ -38,5 +38,6 @@ namespace modul4.ViewModels
                 Quantity = 16
             });
         }
+        //asdasdasdasd
     }
 }
