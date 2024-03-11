@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:modul4"
         xmlns:vms="clr-namespace:modul4.ViewModels"
+        xmlns:helper="clr-namespace:modul4.Helper"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
         <vms:MainWindowViewModel />
-    </Window.DataContext>   
+    </Window.DataContext>
+    <Window.Resources>
+        <helper:NumberToColorConverter x:Key="colorconvert"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -22,7 +26,7 @@
                         <Label Content="{Binding Type}"/>
                         <Label Content="{Binding Price}"/>
                         <Label Content="{Binding Quantity}"/>
-                        <ProgressBar Value="{Binding Quantity}"/>
+                        <ProgressBar Maximum="20" Value="{Binding Quantity}" Foreground="{Binding Quantity, Converter={StaticResource colorconvert}}" Height="10" Width="100"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
