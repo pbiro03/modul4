@@ -17,5 +17,10 @@ namespace modul4.ChocholateLogic
                 return chocolates.Count == 0 ? 0 : chocolates.Sum(t => t.Price);
             }
         }
+
+        public void BuySnack(Chocolate c)
+        {
+
+        }
     }
 }

@@ -29,8 +29,8 @@
         </ListBox>
         <StackPanel Grid.Column="1">
             <Label Content="Income:"/>
-            <Label Content="0" ContentStringFormat=" {0}Ft"/>
-            <Button Content="Add"/>
+            <Label Content="{Binding Income}" ContentStringFormat=" {0}Ft"/>
+            <Button Content="Add" />
             <Button Content="Remove"/>
             <Button Content="Edit"/>
             <Button Content="Buy Snack"/>
