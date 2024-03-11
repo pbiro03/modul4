@@ -19,7 +19,9 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Chocolates}">
+        <ListBox Grid.Column="0" 
+                 ItemsSource="{Binding Chocolates}"
+                 SelectedItem="{Binding SelectedChocolate}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -37,7 +39,7 @@
             <Button Content="Add" />
             <Button Content="Remove"/>
             <Button Content="Edit"/>
-            <Button Content="Buy Snack"/>
+            <Button Content="Buy Snack" Command="{Binding BuySnackButton}"/>
         </StackPanel>
     </Grid>
 </Window>
