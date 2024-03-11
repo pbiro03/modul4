@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace modul4.ViewModels
 {
-    public class MainWindowViewModel: ObservableRecipient
+    public partial class MainWindowViewModel: ObservableRecipient
     {
         //public int Income
         //{
@@ -38,7 +38,8 @@ namespace modul4.ViewModels
                 Quantity = 16
             });
 
-            //asdasdasd
+            //ASDASDASDS
+            
         }
     }
 }
